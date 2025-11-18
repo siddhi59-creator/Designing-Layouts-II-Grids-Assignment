@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Masai Calculator</title>
+
+    <style>
+        /* -------- GLOBAL STYLING -------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #eef1f2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+        }
+
+        h1 {
+            color: #006666;
+            margin-bottom: 20px;
+            font-size: 32px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.25);     /* shadow */
+        }
+
+        #calculator {
+            width: 300px;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.15);          /* calculator shadow */
+        }
+
+        /* DIRECT CHILD COMBINATOR (>) */
+        #calculator > input {
+            height: 50px;
+            padding: 10px;
+            font-size: 22px;
+            text-align: right;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.4);       /* text shadow */
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.2);      /* inner shadow */
+        }
+
+        /* GRID LAYOUT */
+        #keys {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        /* BUTTON BASE STYLE */
+        #keys button {
+            padding: 15px;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.2s;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);       /* character shadow */
+            box-shadow: 3px 3px 6px rgba(0,0,0,0.25);       /* button shadow */
+        }
+
+        /* DESCENDANT COMBINATOR */
+        #calculator button {
+            border: 1px solid transparent;
+        }
+
+        /* NUMBER BUTTONS */
+        .num {
+            background: white;
+            border: 1px solid #ddd;
+        }
+
+        .num:hover {
+            background: #f1f1f1;
+            box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+        }
+
+        /* OPERATOR BUTTONS */
+        .op {
+            background: black;
+            color: white;
+        }
+
+        .op:hover {
+            background: #333;
+            box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+        }
+
+        /* CLEAR BUTTON */
+        .clear {
+            background: red;
+            color: white;
+        }
+
+        .clear:hover {
+            background: #cc0000;
+            box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+        }
+
+        /* EQUAL TO BUTTON */
+        .equal {
+            background: black;
+            color: white;
+        }
+
+        .equal:hover {
+            background: #333;
+            box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+        }
+
+        /* ADJACENT SIBLING COMBINATOR */
+        .clear + .num {
+            border: 2px solid #00a3a3;
+        }
+
+        /* GENERAL SIBLING COMBINATOR */
+        .equal ~ .op {
+            box-shadow: 3px 3px 7px rgba(0,0,0,0.28);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Masai Calculator</h1>
+
+    <div id="calculator">
+
+        <input id="display" type="text" readonly />
+
+        <div id="keys">
+
+            <button class="num">1</button>
+            <button class="num">2</button>
+            <button class="num">3</button>
+            <button class="op">+</button>
+
+            <button class="num">4</button>
+            <button class="num">5</button>
+            <button class="num">6</button>
+            <button class="op">-</button>
+
+            <button class="num">7</button>
+            <button class="num">8</button>
+            <button class="num">9</button>
+            <button class="op">x</button>
+
+            <button class="clear">C</button>
+            <button class="num">0</button>
+            <button class="equal">=</button>
+            <button class="op">/</button>
+
+        </div>
+    </div>
+
+</body>
+</html>
