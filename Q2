@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Weekly Schedule</title>
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #ffffff;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 48px;
+        margin-bottom: 40px;
+        font-weight: 700;
+        color: #1a1a1a;
+    }
+
+    /* Container for everything */
+    .schedule-wrapper {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    /* Day header row */
+    .day-header {
+        display: grid;
+        grid-template-columns: 120px repeat(5, 1fr);
+        gap: 12px;
+        margin-bottom: 15px;
+    }
+
+    .day-header div {
+        text-align: center;
+        padding: 10px 0;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 18px;
+        color: #333;
+    }
+
+    .pink { background: #ffc7e6; }
+    .yellow { background: #ffe89d; }
+
+    /* Schedule grid rows */
+    .schedule-grid {
+        display: grid;
+        grid-template-columns: 120px repeat(5, 1fr);
+        gap: 12px;
+    }
+
+    /* Time column */
+    .time-block {
+        background: #c6f0ff;
+        font-weight: bold;
+        text-align: center;
+        padding: 12px;
+        border-radius: 20px;
+        font-size: 16px;
+    }
+
+    /* Empty schedule cells */
+    .class-block {
+        background: #ffd3f2;
+        border-radius: 20px;
+        height: 45px;
+    }
+
+    .yellow-block {
+        background: #ffe9a8;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Weekly schedule</h1>
+
+<div class="schedule-wrapper">
+
+    <!-- Day Names -->
+    <div class="day-header">
+        <div></div>
+        <div class="pink">Monday</div>
+        <div class="yellow">Tuesday</div>
+        <div class="pink">Wednesday</div>
+        <div class="yellow">Thursday</div>
+        <div class="pink">Friday</div>
+    </div>
+
+    <!-- MAIN GRID -->
+    <div class="schedule-grid">
+
+        <!-- 08:00 Row -->
+        <div class="time-block">08:00</div>
+        <div class="class-block"></div>
+        <div class="yellow-block class-block"></div>
+        <div class="class-block"></div>
+        <div class="yellow-block class-block"></div>
+        <div class="class-block"></div>
+
+        <!-- 09:00 Row -->
+        <div class="time-block">09:00</div>
+        <div class="class-block"></div>
+        <div class="yellow-block class-block"></div>
+        <div class="class-block"></div>
+        <div class="yellow-block class-block"></div>
+        <div class="class-block"></div>
+
+        <!-- 10:00 Row -->
+        <div class="time-block">10:00</div>
+        <div class="class-block"></div>
+        <div class="yellow-block class-block"></div>
+        <div class="class-block"></div>
+        <div class="yellow-block class-block"></div>
+        <div class="class-block"></div>
+
+        <!-- 11:00 Row -->
+        <div class="time-block">11:00</div>
+        <div class="class-block"></div>
+        <div class="yellow-block class-block"></div>
+        <div class="class-block"></div>
+        <div class="yellow-block class-block"></div>
+        <div class="class-block"></div>
+
+        <!-- 12:00 Row -->
+        <div class="time-block">12:00</div>
+        <div class="class-block"></div>
+        <div class="yellow-block class-block"></div>
+        <div class="class-block"></div>
+        <div class="yellow-block class-block"></div>
+        <div class="class-block"></div>
+
+        <!-- 13:00 Row -->
+        <div class="time-block">13:00</div>
+        <div class="class-block"></div>
+        <div class="yellow-block class-block"></div>
+        <div class="class-block"></div>
+        <div class="yellow-block class-block"></div>
+        <div class="class-block"></div>
+
+        <!-- 14:00 Row -->
+        <div class="time-block">14:00</div>
+        <div class="class-block"></div>
+        <div class="yellow-block class-block"></div>
+        <div class="class-block"></div>
+        <div class="yellow-block class-block"></div>
+        <div class="class-block"></div>
+
+        <!-- 15:00 Row -->
+        <div class="time-block">15:00</div>
+        <div class="class-block"></div>
+        <div class="yellow-block class-block"></div>
+        <div class="class-block"></div>
+        <div class="yellow-block class-block"></div>
+        <div class="class-block"></div>
+
+        <!-- 16:00 Row -->
+        <div class="time-block">16:00</div>
+        <div class="class-block"></div>
+        <div class="yellow-block class-block"></div>
+        <div class="class-block"></div>
+        <div class="yellow-block class-block"></div>
+        <div class="class-block"></div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
